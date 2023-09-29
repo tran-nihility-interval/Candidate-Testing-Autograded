@@ -18,7 +18,7 @@ let questions = [
       "(5 + 3)/2 * 10 = ? ",
       "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
       "What is the minimum crew size for the ISS? "
-  ];
+];
 
 let correctAnswers = [
       "Sally Ride",
@@ -26,7 +26,7 @@ let correctAnswers = [
       "40",
       "Trajectory",
       "3"
-  ];
+];
 
 let candidateAnswers;
 candidateAnswers = [];
@@ -51,14 +51,13 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let numAnswer = 0;
     for (let x = 0; x < questions.length; x++) {
-      if(candidateAnswers.toLowerCase[x]===correctAnswers.toLowerCase[x]){numAnswer++;
-    }
-
-    }
-      console.log("Your answer is correct!");
-
+      if(candidateAnswers[x]===correctAnswers[x]){numAnswer++;
+      } //localStorage
+       console.log("Your answer is correct!");
+       return;
+     }
       console.log("Your answer is incorrect!");
-}
+      
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
     grade = (numAnswer/questions.length) * 100
     if (grade >= 80) {
@@ -67,9 +66,9 @@ function gradeQuiz(candidateAnswers) {
       console.log("failed!");
     }
     console.log(`Your total score for the quiz is: ${grade}%`);
-
-  return grade;
-  }
+  
+      return grade;
+}
 
 function runProgram() {
   askForName();
