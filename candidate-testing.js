@@ -51,12 +51,12 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let numAnswer = 0;
     for (let x = 0; x < questions.length; x++) {
-      if(candidateAnswers[x]===correctAnswers[x]){numAnswer++;
-      } //localStorage
-       console.log("Your answer is correct!");
-       return;
-     }
+      if(candidateAnswers[x].toLowerCase()===correctAnswers[x].toLowerCase()){numAnswer++;
+    }//localStorage
+      console.log("Your answer is correct!");
+       //return;
       console.log("Your answer is incorrect!");
+}
       
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
     grade = (numAnswer/questions.length) * 100
@@ -67,8 +67,8 @@ function gradeQuiz(candidateAnswers) {
     }
     console.log(`Your total score for the quiz is: ${grade}%`);
   
-      return grade;
-}
+  return grade;
+  }
 
 function runProgram() {
   askForName();
